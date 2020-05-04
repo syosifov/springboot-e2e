@@ -1,8 +1,8 @@
 package com.salthash.student.dal;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.Test;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,8 +27,23 @@ public class StudentdalApplicationTests {
 		student.setCourse("Java Web Services");
 		student.setFee(30d);
 		
-		studentRepository.save(student);
+		studentRepository.save(student);		
 		
+	}
+	
+	@Test
+	public void testFindStudentById() {
+		Optional<Student> student = studentRepository.findById(1l);
+		System.out.println(student);
+		
+	}
+	
+	@Test
+	public void testUpdateStudentById() {
+		Student student = studentRepository.findById(5l).get();
+		student.setFee(40d);
+		
+		studentRepository.save(student);
 		
 	}
 
