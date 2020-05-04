@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class Student {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(name = "sname")
@@ -22,7 +22,7 @@ public class Student {
 	@Column(name = "scourse")
 	private String course;	 
 
-	@Column(name = "fee")
+	@Column(name = "sfee")
 	private Double fee;
 
 	public Long getId() {
