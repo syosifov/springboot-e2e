@@ -46,5 +46,12 @@ public class StudentdalApplicationTests {
 		studentRepository.save(student);
 		
 	}
+	
+	@Test
+	public void testDeleteStudent() {
+		Student student = new Student();
+		student.setId(5l);
+		studentRepository.delete(student);
+	}
 
 }
