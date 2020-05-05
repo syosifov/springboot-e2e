@@ -3,16 +3,23 @@ package com.salthash.clinicalapi.model;
 import java.security.Timestamp;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class ClinicalData {
-	
+
 	@Id
 	private int id;
 	private String componentName;
 	private String componentValue;
 	private Timestamp mesuredDateTime;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "patient_id", nullable = false)
+	private Patient patient;
 
 	public int getId() {
 		return id;
