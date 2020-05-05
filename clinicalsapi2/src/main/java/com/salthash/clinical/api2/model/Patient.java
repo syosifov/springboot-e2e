@@ -1,4 +1,4 @@
-package com.salthash.clinicalapi.model;
+package com.salthash.clinical.api2.model;
 
 import java.util.List;
 
@@ -16,7 +16,6 @@ public class Patient {
 	private String lastName;
 	private String firstName;
 	private int age;
-
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "patient")
 	private List<ClinicalData> clinicalData;
 
@@ -50,6 +49,14 @@ public class Patient {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public List<ClinicalData> getClinicalData() {
+		return clinicalData;
+	}
+
+	public void setClinicalData(List<ClinicalData> clinicalData) {
+		this.clinicalData = clinicalData;
 	}
 
 }

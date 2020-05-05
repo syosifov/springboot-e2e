@@ -8,10 +8,10 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.salthash.clinicalapi</groupId>
-	<artifactId>clinicalapi</artifactId>
+	<groupId>com.salthash.clinical.api2</groupId>
+	<artifactId>clinicalsapi2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>clinicalapi</name>
+	<name>clinicalsapi2</name>
 	<description>Clinical RESTful API</description>
 
 	<properties>
